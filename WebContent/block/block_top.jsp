@@ -224,7 +224,7 @@ to {
 					aria-expanded="false" class="dropdown-toggle">Báo cáo và thống
 						kê</a>
 					<ul class="collapse list-unstyled" id="pageSubmenu">
-						<li><a href="BC_TinhTrangMau.jsp">Báo cáo tình trạng máu</a></li>
+						<li><a href="BC_TinhTrangMau">Báo cáo tình trạng máu</a></li>
 						<li><a href="BC_TungDotHienMau">Báo cáo từng đợt hiến
 								máu</a></li>
 						<li><a href="ThongKe">Thống kê số lượng máu</a></li>

@@ -56,6 +56,8 @@
 							id="inlineFormCustomSelect" name="txt_nam">
 							<option selected value="<%=currentSelectNam%>">Năm: <%=currentSelectNam != -1 ? currentSelectNam : "ALL"%></option>
 							<option value ="-1" >Năm: ALL</option>
+							<option value="2016">2016</option>
+							<option value="2017">2017</option>
 							<option value="2018">2018</option>
 							<option value="2019">2019</option>
 							<option value="2020">2020</option>

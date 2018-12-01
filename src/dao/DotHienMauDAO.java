@@ -3,6 +3,7 @@ import java.sql.*;
 import java.util.ArrayList;
 
 import bean.*;
+import config.Database;
 public class DotHienMauDAO {
 	public ArrayList<DotHienMau> listDotHienmau() throws Exception{
 		ArrayList<DotHienMau> list = new ArrayList<DotHienMau>();

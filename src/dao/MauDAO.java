@@ -6,6 +6,7 @@ import com.sun.org.apache.xalan.internal.xsltc.compiler.util.ResultTreeType;
 
 import java.sql.*; 
 import bean.*;
+import config.Database;
 public class MauDAO {
 	
 	public ArrayList<Mau> listMau() throws Exception{

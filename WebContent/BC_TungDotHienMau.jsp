@@ -57,6 +57,8 @@
 							id="inlineFormCustomSelect" name="txt_nam">
 							<option selected value="<%=currentSelectNam%>">Năm: <%=currentSelectNam != -1 ? currentSelectNam : "ALL"%></option>
 							<option value ="-1" >Năm: ALL</option>
+							<option value="2016">2016</option>
+							<option value="2017">2017</option>
 							<option value="2018">2018</option>
 							<option value="2019">2019</option>
 							<option value="2020">2020</option>
@@ -83,18 +85,31 @@
 				</thead>
 				<tbody>
 				<%
+					if(listDot.size() == 0){%>
+						<tr>
+							<th scope="row"><%=0%></th>
+							<td><%="Không có đợt hiến máu"%></td>
+							<td><%=" "%></td>
+							<td><%=" "%></td>
+							<td><%=" "%></td>
+							<td><%=" "%></td>
+							<td><%=" "%></td>
+						</tr>
+				<%	}
+				%>
+				<%
 					for(int i = 0;i<listDot.size();i++){%>
 						<tr>
-						<th scope="row"><%=i+1 %></th>
-						<td><%=listDot.get(i).getMaDot() %></td>
-						<td><%=listDot.get(i).getDiaDiem() %></td>
-						<td><%=listDot.get(i).getNgayBatDau() %></td>
-						<td><%=listDot.get(i).getNgayKetThuc() %></td>
-						<td><%=listDot.get(i).getSoNguoiHien() %><br>
-						<span data-toggle="modal" data-target="#exampleModall"
-							style="color: blue" onclick='javascript:loadDanhSachNguoiHienMau("<%=listDot.get(i).getMaDot()%>")'>Danh sách</span></td>
-						<td><%=listDot.get(i).getTinhTrang() %></td>
-					</tr>
+							<th scope="row"><%=i+1 %></th>
+							<td><%=listDot.get(i).getMaDot() %></td>
+							<td><%=listDot.get(i).getDiaDiem() %></td>
+							<td><%=listDot.get(i).getNgayBatDau() %></td>
+							<td><%=listDot.get(i).getNgayKetThuc() %></td>
+							<td><%=listDot.get(i).getSoNguoiHien() %><br>
+							<span data-toggle="modal" data-target="#exampleModall"
+								style="color: blue" onclick='javascript:loadDanhSachNguoiHienMau("<%=listDot.get(i).getMaDot()%>")'>Danh sách</span></td>
+							<td><%=listDot.get(i).getTinhTrang() %></td>
+						</tr>
 
 					<!--<tr>
 						<th scope="row"></th>

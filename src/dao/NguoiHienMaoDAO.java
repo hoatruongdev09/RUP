@@ -6,6 +6,7 @@ import java.sql.ResultSet;
 import java.util.ArrayList;
 
 import bean.NguoiHienMau;
+import config.Database;
 
 public class NguoiHienMaoDAO {
 	public ArrayList<NguoiHienMau> listNguoiHienMauTheoDot(int madot) throws Exception{
