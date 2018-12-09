@@ -9,6 +9,21 @@ import bean.*;
 import config.Database;
 public class MauDAO {
 	
+	public Mau getMau(int id) throws Exception {
+		Connection cn = Database.KetNoi();
+		String query = "SELECT * FROM mau WHERE mamau = ?";
+		PreparedStatement stmt = cn.prepareStatement(query);
+		stmt.setInt(1, id);
+		ResultSet rs = stmt.executeQuery();
+		Mau tmp = null;
+		while(rs.next()) {
+			tmp = new Mau(rs.getInt(1), rs.getString(2), rs.getInt(3), rs.getString(4), rs.getString(5));
+		}
+		stmt.close();
+		cn.close();
+		return tmp;
+	}
+	
 	public ArrayList<Mau> listMau() throws Exception{
 		ArrayList<Mau> list = new ArrayList();
 		Connection cn = Database.KetNoi();

@@ -10,6 +10,9 @@ public class MauBO {
 		mauDao = new MauDAO();
 	}
 	
+	public Mau getMau(int id) throws Exception {
+		return mauDao.getMau(id);
+	}
 	public ArrayList<Mau> listMau() throws Exception{
 		return mauDao.listMau();
 	}
